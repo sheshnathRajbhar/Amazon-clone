@@ -3,139 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind Example</title>
+  <title>Amazon Clone</title>
   <script src="https://cdn.tailwindcss.com"></script>
- <script src=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
- 
-  </style>
 </head>
-<body>
-  <!--Navbar -->
-  <nav class="py-2 px-1 bg-gray-500 flex justify-between items-center justify-evenly">
-    <div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="w-20 h-10 border border-transparent hover:border-white p-2" alt="Amazon Logo" />
-</div>
-<div class=" gap-4 border border-transparent hover:border-white py-2 px-1 ">
-    <p>Delivery to lucknow</p>
-    
-    <p ><i class="fa-solid fa-location-dot"></i>India</p>
-</div>
-<div class="flex  rounded ">
-    <select class="border border-gray-300 border-r-0 rounded rounded-r-none outline-none py-2 px-1">
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-700 text-white px-4 py-2 flex flex-wrap items-center justify-between gap-4">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg " class="w-24 h-10 rounded border border-transparent hover:border-white p-2" alt="Logo">
+
+    <div class="text-sm rounded border border-transparent hover:border-white p-2">
+      <p>Delivery to Lucknow</p>
+      <p><i class="fa-solid fa-location-dot"></i> India</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex flex-grow max-w-full md:max-w-xl w-full">
+      <select class="border border-gray-300 border-r-0 rounded-l p-2 bg-white text-black">
         <option>All</option>
-    </select>
-    <div>
-        <input type="text" placeholder="Search" class="border  rounded border-l-0 rounded-l-none p-2 w-[400px] outline-none" />
-        <button class="bg-blue-500 text-white rounded p-2"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </div>
-</div>
-<div class="flex justify-between ">
-   <label for="flag" class="text-white flex items-center justify-between border border-transparent hover:border-white ">
-    <img src="./Assets/flag.png" alt="flag" class="w-8 h-6 " />EN
-   </label>
-   <div class="relative group inline-block">
-    <button class="bg- text-white px-4 py-2 rounded"><i class="fa-solid fa-caret-down"></i>
+      </select>
+      <input 
+      type="text" 
+      placeholder="Search" 
+      class="flex-grow min-w-0 p-2 border-t border-b border-gray-300 outline-none text-black" 
+    />
+    <button class="bg-yellow-500 text-black px-4 py-2 rounded-r">
+      <i class="fa-solid fa-magnifying-glass"></i>
     </button>
-  
-    <ul class="absolute left-0 mt-2 w-40 bg-white border border-gray-300 rounded shadow-lg hidden group-hover:block">
-      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">En</li>
-      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Hi</li>
-      <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">ot</li>
-    </ul>
-  </div>
-</div>
-<div>
-   <div class="border border-transparent hover:border-white py-2 px-1 relative group inline-block">
-    <p class=" text-xs">Hello,<span>Sign In</span><h2 class="font-bold">Account & List <div class="relative group inline-block">
-        
-        
-          
-            <ul class="absolute left-0 mt-2 w-40 bg-white border border-gray-300 rounded shadow-lg hidden group-hover:block">
-              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">En</li>
-              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Hi</li>
-              <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">ot</li>
-            </ul>
-        </h2></p>
-          </div>
-          <div class="relative group inline-block">
-            <button class="bg- text-white rounded"><i class="fa-solid fa-caret-down"></i>
-            </button>
-            </div>
-   </div>
-</div>
-<div class="border border-transparent hover:border-white py-2 px-1" >
-    <p class="text-xs">Return</p>
-    <h2 class="font-bold">&Others</h2>
-</div>
-<div class="flex justify-between items-center border border-transparent hover:border-white py-2 px-1">
-    <i class="fa-solid fa-cart-plus fa-2xl"></i>
-    <P>cart</P>
-</div>
+    </div>
+
+    <!-- Language -->
+    <div class="flex items-center space-x-2 rounded border border-transparent hover:border-white p-2">
+      <img src="./Assets/flag.png" alt="flag" class="w-6 h-4" />
+      <span>EN</span>
+      <i class="fa-solid fa-caret-down"></i>
+
+    </div>
+
+    <!-- Account -->
+    <div class="text-xs text-left rounded border border-transparent hover:border-white p-2">
+      <p>Hello, Sign In</p>
+      <p class="font-bold">Account & Lists <i class="fa-solid fa-caret-down"></i></p>
+    </div>
+
+    <!-- Returns -->
+    <div class="text-xs text-left rounded border border-transparent hover:border-white p-2">
+      <p>Returns</p>
+      <p class="font-bold">& Orders</p>
+    </div>
+
+    <!-- Cart -->
+    <div class="flex items-center rounded border border-transparent hover:border-white p-2">
+      <i class="fa-solid fa-cart-plus fa-xl mr-2"></i>
+      <span class="text-sm">Cart</span>
+    </div>
   </nav>
-  <!--categories -->
-  <div class="bg-gray-200 flex justify-between items-center py-2 px-1 justify-evenly">
-    <div class="flex items-center">
-      <div class="border border-transparent hover:border-white py-2 px-1 ">
-        <p class="p-2 flex items-center"><i class="fa-solid fa-bars mx-2"></i>All</p>
-      </div>
-     <a href="#" class="block p-2 border border-transparent hover:border-white">Today's Deals</a>
-     <a href="#" class="block p-2 border border-transparent hover:border-white">Customer Service</a>     
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Registry</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Gift Cards</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Sell</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Basics</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Prime</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Music</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Pay</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Fresh</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Pantry</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Fashion</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Home</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Electronics</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Books</a>
-      <a href="#" class="block p-2 border border-transparent hover:border-white">Amazon Toys</a>
+
+  <!-- Categories -->
+  <div class="bg-gray-200 flex flex-wrap justify-center px-2 py-2 gap-2 text-sm">
+    <div class="flex items-center gap-1 px-2 py-1  rounded cursor-pointer border border-transparent hover:border-white p-2">
+      <i class="fa-solid fa-bars px-2"></i> <span class="mx-2">All</span>
     </div>
+    <a href="#" class="px-2 py-1 border border-transparent hover:border-white p-2 rounded">Today's Deals</a>
+    <a href="#" class="px-2 py-1 border border-transparent hover:border-white p-2 rounded">Customer Service</a>
+    <a href="#" class="px-2 py-1 border border-transparent hover:border-white p-2 rounded">Registry</a>
+    <a href="#" class="px-2 py-1 border border-transparent hover:border-white p-2 rounded">Gift Cards</a>
+    <a href="#" class="px-2 py-1 border border-transparent hover:border-white p-2 rounded">Sell</a>
+    <!-- Add more categories as needed -->
   </div>
-  <main class=" items-center justify-center mt-0 bg-yellow-200 h-auto">
+
+  <!-- Main Section -->
+  <main class="bg-yellow-100 py-8">
     <div class="text-center">
-    <h1 class="text-2xl font-bold mb-4">Welcome to Amazon</h1>
-    <p class="text-gray-600 mb-4">Shop the latest products and deals</p>
-    <button class="bg-blue-500 text-white px-4 py-2 rounded">Shop Now</button>
-  </div>
-  <div class="grid grid-cols-5 gap-4 mt-2 mb-2">
-    <div class="px-4 bg-white rounded shadow-2xl mx-2 mt-4 w-[250px]">
-      <p>Smart phone cruted for you</p>
-      <img src="./Assets/download.jpg" alt="Placeholder Image" class="mt-4 rounded shadow-lg" />
-      <P>Budget|Under</P>
-      <p>Rs.10,000</p>
+      <h1 class="text-2xl font-bold">Welcome to Amazon</h1>
+      <p class="text-gray-700">Shop the latest products and deals</p>
+      <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Shop Now</button>
     </div>
-    <div class="px-4 bg-white rounded shadow-2xl mx-2 mt-4 w-[250px]">
-      <p>Smart phone cruted for you</p>
-      <img src="./Assets/download.jpg" alt="Placeholder Image" class="mt-4 rounded shadow-lg" />
-      <P>Budget|Under</P>
-      <p>Rs.10,000</p>
+
+    <!-- Product Cards -->
+    <div class="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-8 px-4">
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
+      <div class="bg-white rounded shadow p-4 text-center">
+        <p class="font-semibold">Smartphones curated for you</p>
+        <img src="./Assets/download.jpg" alt="Product" class="w-full mt-4 rounded shadow">
+        <p class="text-gray-600 mt-2">Budget | Under</p>
+        <p class="font-bold">Rs.10,000</p>
+      </div>
     </div>
-    <div class="px-4 bg-white rounded shadow-2xl mx-2 mt-4 w-[250px]">
-      <p>Smart phone cruted for you</p>
-      <img src="./Assets/download.jpg" alt="Placeholder Image" class="mt-4 rounded shadow-lg" />
-      <P>Budget|Under</P>
-      <p>Rs.10,000</p>
+    <div class="text-center mt-8 bg-white p-4 rounded shadow">
+      <p class="font-bold text-2xl">See personalized recommendations</p>
+      <button class="mt-4   text-white px-4 py-2 rounded bg-yellow-500">Sign In</button>
+      <p class="text-xs">New customer? <a href="#" class="text-blue-600 hover:underline ">Click here</a></p>
+      
     </div>
-    <div class="px-4 bg-white rounded shadow-2xl mx-2 mt-4 w-[250px]">
-      <p>Smart phone cruted for you</p>
-      <img src="./Assets/download.jpg" alt="Placeholder Image" class="mt-4 rounded shadow-lg" />
-      <P>Budget|Under</P>
-      <p>Rs.10,000</p>
-    </div>
-    <div class="px-4 bg-white rounded shadow-2xl mx-2 mt-4 w-[250px]">
-      <p>Smart phone cruted for you</p>
-      <img src="./Assets/download.jpg" alt="Placeholder Image" class="mt-4 rounded shadow-lg" />
-      <P>Budget|Under</P>
-      <p>Rs.10,000</p>
-    </div>
-  </div>
-    </main>
+  </main>
 
 </body>
 </html>
